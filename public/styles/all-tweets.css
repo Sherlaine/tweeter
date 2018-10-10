@@ -1,0 +1,57 @@
+#all-tweets {
+  border-radius: 5px;
+  margin-top: 25px;
+}
+
+.tweet {
+  background: white;
+  border: 1px #aaa solid;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.tweet header {
+  background: #f3f3f3;
+  opacity: 0.8;
+  border-bottom: 1px #a6a4a46c solid;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 80px;
+  padding: 10px;
+}
+
+.tweet .avatar {
+  border-radius: 10px;
+  float: left;
+  height: 60px;
+  width: 60px;
+
+}
+
+.tweet .username {
+  color: grey;
+  float: right;
+  font-size: 1em;
+  font-weight: lighter;
+}
+
+.tweet .fullname {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-bottom: 20px;
+  padding-left: 75px;
+}
+
+.tweet .tweet-content {
+  padding: 15px;
+}
+
+.tweet footer p {
+  border-top: 1px #cbc9c9 solid;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: .8em;
+  margin: 0px;
+  padding: 15px 10px;
+}
