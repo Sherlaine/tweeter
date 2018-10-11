@@ -40,31 +40,32 @@ $(document).ready(function () {
     // renderTweets(data);
 
 
-function showMessage(message){
-    alert(message);
-  };
+    function showMessage(message) {
+        alert(message);
+    };
 
     $('#createTweet').on('submit', function (event) {
         event.preventDefault();
         var data = $('#createTweet').serialize();
         var tweetLength = $('#textArea').val().length;
-        if (tweetLength === 0){
+        if (tweetLength === 0) {
             showMessage("Please add text ");
-            return; 
+            return;
         };
-        if (tweetLength > 140){
+        if (tweetLength > 140) {
             showMessage("Exceeded word limit ");
             return;
         } else {
             $('#counter').text("140")
         }
-        
+
 
         $.ajax({
             url: '/tweets',
             method: 'POST',
             data: data,
             success: function (result) {
+                $('#textArea').val('');
                 loadTweets();
             },
             error: function (err) {
