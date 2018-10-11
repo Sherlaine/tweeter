@@ -1,6 +1,6 @@
 $(document).ready(function () {
     console.log("document ready!");
-    $('.new-tweet textarea').on('keypress', function () {
+    $('.new-tweet textarea').on('input', function () {
         let charLeft = 140 - $(this).val().length;
         console.log(charLeft)
         $('#counter').text(charLeft)
