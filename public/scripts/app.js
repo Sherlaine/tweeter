@@ -76,7 +76,7 @@ $(document).ready(function () {
     }
 
     function renderTweets(tweets) {
-        data.forEach(function (element) {
+        tweets.forEach(function (element) {
             var result = createTweetElement(element);
             $('#all-tweets').append(result)
 
@@ -84,11 +84,13 @@ $(document).ready(function () {
 
     }
 
-    $('#tweetform').on('submit', function (event) {
+    renderTweets(data);
+
+    $('#createTweet').on('submit', function (event) {
         event.preventDefault();
-        // console.log("we submitted the form")
-        var data = $('#tweetform').serialize();
-        // console.log(data);
+        console.log("we submitted the form")
+        var data = $('#createTweet').serialize();
+        console.log(data);
 
 
         $.ajax({
@@ -96,7 +98,6 @@ $(document).ready(function () {
             method: 'POST',
             data: data,
             success: function (result) {
-                $('#tweets').prepend(data);
                 loadTweets();
             },
             error: function (err) {
@@ -104,5 +105,12 @@ $(document).ready(function () {
             }
         })
     })
-    
+
+    function loadTweets() {
+        $.get("/tweets", function (tweets) {
+            $("#all-tweets").empty();
+            renderTweets(tweets)
+        });
+
+    }
 });
