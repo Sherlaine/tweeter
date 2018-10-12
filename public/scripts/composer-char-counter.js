@@ -6,8 +6,10 @@ $(document).ready(function () {
         $('#counter').text(charLeft)
         if (charLeft < 0) {
             $('#counter').css('color', 'red');
+            $('.new-tweet').find('.error').slideDown();
         } else {
             $('#counter').css('color', 'black');
+            $('.new-tweet').find('.error').slideUp();
         }
     });
 });

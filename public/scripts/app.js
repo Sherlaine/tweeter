@@ -49,11 +49,11 @@ $(document).ready(function () {
         var data = $('#createTweet').serialize();
         var tweetLength = $('#textArea').val().length;
         if (tweetLength === 0) {
-            showMessage("Please add text ");
+            showMessage("Please add text");
             return;
         };
         if (tweetLength > 140) {
-            showMessage("Exceeded word limit ");
+            showMessage("Exceeded word limit");
             return;
         } else {
             $('#counter').text("140")
