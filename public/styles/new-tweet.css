@@ -22,9 +22,11 @@ padding: 3%;
     border-bottom: 1px solid #000000;
 }
 
-.counter{
+#counter{
     float: right;
     padding-right: 5px;
+    font-size: .9em;
+    margin-top: 7px;
 }
 
 
