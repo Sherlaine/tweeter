@@ -15,7 +15,8 @@ main {
 
 textarea {
 width: 100%;
-padding: 3%; 
+padding: 3%;
+font-style: italic;   
 }
 
 .new-tweet h2 {
@@ -24,9 +25,9 @@ padding: 3%;
 
 #counter{
     float: right;
-    padding-right: 5px;
-    font-size: .9em;
-    margin-top: 7px;
+    padding-right: 6px;
+    font-size: .8em;
+    margin-top: 6px;
 }
 
 

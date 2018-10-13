@@ -13,7 +13,7 @@
 }
 
 #nav-bar .logo {
-    width: 80px;
+    width: 75px;
     float: left;
 }
 
@@ -26,20 +26,22 @@
 }
 
 #nav-bar .compose-btn {
- font-size: .9em;
- margin-top: 20px;
- width: 80px; 
- height: 40px;
- float: right;
- border-radius: 5px;
- border: 1px black solid;
- background: white;
- opacity: 0.9;
- color: #00a087;
+    border-radius: 6px;
+    border: 1px black solid;
+    background: white;
+    color: #07b298;
+    font-size: 1em;
+    float: right;
+    margin-top: 15px;
+    opacity: 0.9;
+    height: 50px;
+    width: 85px;
 }
-#nav-bar .compose-btn:hover, .compose-btn:active  {
- color: black;
- transition: .5s all ease-in;
- opacity: 1;
- cursor: pointer;
+
+#nav-bar .compose-btn:hover,
+.compose-btn:active {
+    color: black;
+    cursor: pointer;
+    transition: .3s all ease-in;
+    opacity: 1;
 }
